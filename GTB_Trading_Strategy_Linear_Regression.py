@@ -13,6 +13,13 @@ class Trader:
             order_depth: OrderDepth = state.order_depths[product]
             orders: List[Order] = []
             #use linear regresion to adjust the acceptable price
+            
+            t = 1
+            p = []
+            p.append(t)
+            # jokes
+                
+        
             acceptable_price = 12;  # Participant should calculate this value
             print("Acceptable price : " + str(acceptable_price))
             print("Buy Order depth : " + str(len(order_depth.buy_orders)) + ", Sell order depth : " + str(len(order_depth.sell_orders)))
