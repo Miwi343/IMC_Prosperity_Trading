@@ -12,6 +12,7 @@ class Trader:
         for product in state.order_depths:
             order_depth: OrderDepth = state.order_depths[product]
             orders: List[Order] = []
+            #use linear regresion to adjust the acceptable price
             acceptable_price = 12;  # Participant should calculate this value
             print("Acceptable price : " + str(acceptable_price))
             print("Buy Order depth : " + str(len(order_depth.buy_orders)) + ", Sell order depth : " + str(len(order_depth.sell_orders)))
@@ -29,6 +30,8 @@ class Trader:
                     orders.append(Order(product, best_bid, -best_bid_amount))
             
             result[product] = orders
+            
+            
     
     
         traderData = "SAMPLE" # String value holding Trader state data required. It will be delivered as TradingState.traderData on next execution.
